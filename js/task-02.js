@@ -8,3 +8,13 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
+
+const listEl = document.querySelector("ul");
+
+for(const ingredient of ingredients) {
+  const li = document.createElement('li');
+  li.textContent = ingredient;
+  // console.log(li);
+  listEl.append(li);
+}
+// console.log(listEl);

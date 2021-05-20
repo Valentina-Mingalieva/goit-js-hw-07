@@ -19,3 +19,31 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const listEl = document.querySelector("#gallery");
+
+const markup = images.reduce(
+    (string, image) => string + `<li><img class="image" src="${image.url}" alt="${image.alt}"></li>`,
+    ""
+);
+
+listEl.insertAdjacentHTML("beforeend", markup);
+
+console.log(listEl);  
+
+/* const markup = images.forEach(
+  image => {
+    return `<li><img class="image" src="${image.url}" alt="${image.alt}"></li>`
+  }); // undefined
+    
+listEl.insertAdjacentHTML("afterbegin", markup); */
+
+
+/* const listRef = document.querySelector('#gallery');
+  listRef.insertAdjacentHTML('beforeend', createList(images));
+
+  function createList(images) {
+    return images.map(({ url, alt }) => {
+      return <li><img src="${url}" alt="${alt}"></li>;
+    }).join('');
+  } */

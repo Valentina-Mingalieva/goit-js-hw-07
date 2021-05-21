@@ -6,3 +6,22 @@
 // - Каждый следующий div после первого, должен быть шире и выше предыдущего на 10px
 // Создай функцию destroyBoxes(), которая очищает div#boxes.
 
+const inpEl = document.querySelector("input");
+const renderBtn = document.querySelector("[data-action='render']");
+const destroyBtn = document.querySelector("[data-action='destroy']");
+const boxes = document.querySelector("#boxes");
+
+renderBtn.addEventListener("click", onInputAdd);
+destroyBtn.addEventListener("click", destroyBoxes);
+
+inpEl.addEventListener("input", onInputAdd);
+
+function onInputAdd() {
+    let amount = inpEl.value;
+    createBoxes(amount);
+}
+
+
+function destroyBoxes() {
+  boxes.innerHTML = "";
+}

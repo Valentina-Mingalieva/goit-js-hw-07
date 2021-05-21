@@ -31,14 +31,6 @@ listEl.insertAdjacentHTML("beforeend", markup);
 
 console.log(listEl);  
 
-/* const markup = images.forEach(
-  image => {
-    return `<li><img class="image" src="${image.url}" alt="${image.alt}"></li>`
-  }); // undefined
-    
-listEl.insertAdjacentHTML("afterbegin", markup); */
-
-
 /* const listRef = document.querySelector('#gallery');
   listRef.insertAdjacentHTML('beforeend', createList(images));
 

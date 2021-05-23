@@ -10,16 +10,20 @@ inp.addEventListener("input", checkLength);
 
 function checkLength(event) {
     
-    if (event.currentTarget.value.length <= numberInput) {
+    if (event.currentTarget.value.length === numberInput) {
         inp.classList.add("valid");
-        inp.classList.remove("invalid");
-    }
-    if (event.currentTarget.value.length === 0) {
-        inp.classList.remove("valid");
         inp.classList.remove("invalid");
     }
     if (event.currentTarget.value.length > numberInput) {
         inp.classList.add("invalid");
         inp.classList.remove("valid");
+    }
+    if (event.currentTarget.value.length < numberInput) {
+        inp.classList.add("invalid");
+        inp.classList.remove("valid");
+    }
+    if (event.currentTarget.value.length === 0) {
+        inp.classList.remove("valid");
+        inp.classList.remove("invalid");
     }
 }

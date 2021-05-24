@@ -27,3 +27,19 @@ function checkLength(event) {
         inp.classList.remove("invalid");
     }
 }
+
+// oder 
+
+/* const followUpInput = document.querySelector('#validation-input');
+followUpInput.addEventListener('blur', onTargetInput)
+const toggleClass=(prev,next,node)=>{
+    node.classList.remove(prev);
+    node.classList.add(next);
+}
+function onTargetInput(event){
+    const inputLength=event.currentTarget.value.length;
+    const dataLength=event.currentTarget.attributes["data-length"].nodeValue;
+    inputLength===Number(dataLength)?
+        toggleClass('invalid','valid',followUpInput) :
+        toggleClass('valid','invalid',followUpInput)
+} */

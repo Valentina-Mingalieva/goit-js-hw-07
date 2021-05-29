@@ -20,7 +20,7 @@ const images = [
   },
 ];
 
-const listEl = document.querySelector("#gallery");
+/* const listEl = document.querySelector("#gallery");
 
 const markup = images.reduce(
     (string, image) => string + `<li><img class="image" src="${image.url}" alt="${image.alt}"></li>`,
@@ -29,13 +29,15 @@ const markup = images.reduce(
 
 listEl.insertAdjacentHTML("beforeend", markup);
 
-console.log(listEl);  
+console.log(listEl); */  
 
-/* const listRef = document.querySelector('#gallery');
-  listRef.insertAdjacentHTML('beforeend', createList(images));
+const listRef = document.querySelector('#gallery');
 
-  function createList(images) {
-    return images.map(({ url, alt }) => {
-      return <li><img src="${url}" alt="${alt}"></li>;
-    }).join('');
-  } */
+const createList = function (items) { // function createlist (items) {}
+  return items.map(({ url, alt }) => {
+    return `<li><img src="${url}" alt="${alt}" /></li>`;
+  }).join('');
+}
+
+listRef.insertAdjacentHTML('beforeend', createList(images));
+console.log(listRef); 

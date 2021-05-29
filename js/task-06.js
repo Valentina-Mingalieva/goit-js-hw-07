@@ -9,20 +9,17 @@ let numberInput = parseInt(inpLength);
 inp.addEventListener("input", checkLength);
 
 function checkLength(event) {
+    const myInput = event.currentTarget.value.length;
     
-    if (event.currentTarget.value.length === numberInput) {
+    if (myInput === numberInput) {
         inp.classList.add("valid");
         inp.classList.remove("invalid");
     }
-    if (event.currentTarget.value.length > numberInput) {
+    if (myInput > numberInput || myInput < numberInput) {
         inp.classList.add("invalid");
         inp.classList.remove("valid");
     }
-    if (event.currentTarget.value.length < numberInput) {
-        inp.classList.add("invalid");
-        inp.classList.remove("valid");
-    }
-    if (event.currentTarget.value.length === 0) {
+    if (myInput === 0) {
         inp.classList.remove("valid");
         inp.classList.remove("invalid");
     }
